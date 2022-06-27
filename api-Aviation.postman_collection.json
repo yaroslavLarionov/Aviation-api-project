@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "8ed60845-aae9-4f1a-bf85-4e8f15a740c8",
+		"name": "api-Aviation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21540973"
+	},
+	"item": [
+		{
+			"name": "get-charts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Content-Type is application/json\", function() {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.aviationapi.com/v1/charts?apt=KAVL",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aviationapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"charts"
+					],
+					"query": [
+						{
+							"key": "apt",
+							"value": "KAVL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-changes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Content-Type is application/json\", function() {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.aviationapi.com/v1/charts/changes?chart_name=TAKEOFF",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aviationapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"charts",
+						"changes"
+					],
+					"query": [
+						{
+							"key": "chart_name",
+							"value": "TAKEOFF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-airports",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Content-Type is application/json\", function() {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.aviationapi.com/v1/airports?apt=KAVL",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aviationapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"airports"
+					],
+					"query": [
+						{
+							"key": "apt",
+							"value": "KAVL"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-pilots",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify Content-Type is application/json\", function() {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.aviationapi.com/v1/vatsim/pilots?apt=KCLT",
+					"protocol": "https",
+					"host": [
+						"api",
+						"aviationapi",
+						"com"
+					],
+					"path": [
+						"v1",
+						"vatsim",
+						"pilots"
+					],
+					"query": [
+						{
+							"key": "apt",
+							"value": "KCLT"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
